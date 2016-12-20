@@ -1,0 +1,71 @@
+10.57.111.226	22	baoadmin	redhat	 SSH dev Nginx A  |
+10.57.111.227	22	baoadmin	redhat	 SSH dev Nginx B  |
+10.70.64.1	22	baoadmin	redhat     SSH dev 新建应用服务器Tomcat配置项  |
+10.70.64.2	22	baoadmin	redhat     SSH dev 新建应用服务器Tomcat配置项  |
+10.70.64.3	22	baoadmin	redhat     SSH dev 新建应用服务器Tomcat配置项  |
+10.70.64.4	22	baoadmin	redhat     SSH dev 新建应用服务器Tomcat配置项  |
+10.70.64.5	22	baoadmin	redhat     SSH dev 新建应用服务器Tomcat配置项  |
+10.70.64.6	22	baoadmin	redhat     SSH dev 新建应用服务器Tomcat配置项  |
+10.70.64.7	22	baoadmin	redhat     SSH dev 新建应用服务器Tomcat配置项  |
+10.70.64.8	22	baoadmin	redhat     SSH dev 新建应用服务器Tomcat配置项  |
+10.70.64.9	22	baoadmin	redhat     SSH dev 新建应用服务器Tomcat配置项  |
+10.70.64.10	22	baoadmin	redhat    SSH dev  新建应用服务器Tomcat配置项  |
+10.70.64.11	22	baoadmin	redhat    SSH dev  新建应用服务器Tomcat配置项  |
+10.70.64.12	22	baoadmin	redhat    SSH dev  新建应用服务器Tomcat配置项  |
+10.70.64.13	22	baoadmin	redhat    SSH dev  新建应用服务器Tomcat配置项  |
+10.70.64.14	22	baoadmin	redhat    SSH dev  新建应用服务器Tomcat配置项  |
+10.70.64.15	22	baoadmin	redhat    SSH dev  新建应用服务器Tomcat配置项  |
+10.70.64.16	22	baoadmin	redhat    SSH dev  新建应用服务器Tomcat配置项  |
+10.70.64.17	22	baoadmin	redhat    SSH dev  新建应用服务器Tomcat配置项  |
+10.70.64.18	22	baoadmin	redhat    SSH dev  新建应用服务器Tomcat配置项  |
+10.70.64.19	22	baoadmin	redhat    SSH dev  新建应用服务器Tomcat配置项  |
+10.70.64.20	22	baoadmin	redhat    SSH dev  新建应用服务器Tomcat配置项  |
+10.70.64.21	22	baoadmin	redhat    SSH dev  新建应用服务器Tomcat配置项  |
+10.70.64.22	22	baoadmin	redhat    SSH dev  新建应用服务器Tomcat配置项  |
+10.70.64.23	22	baoadmin	redhat    SSH dev  新建应用服务器Tomcat配置项  |
+10.70.64.24	22	baoadmin	redhat    SSH dev  新建应用服务器Tomcat配置项  |
+10.70.64.25	22	baoadmin	redhat    SSH dev  新建Mysql数据库  |
+10.70.64.26	22	baoadmin	redhat    SSH dev  新建Mysql数据库  |
+10.70.64.27	22	baoadmin	redhat    SSH dev  新建Mysql数据库  |
+10.70.64.28	22	baoadmin	redhat    SSH dev  新建Mysql数据库  |
+10.70.64.29	22	baoadmin	redhat    SSH dev  新建Mysql数据库  |
+10.70.64.30	22	baoadmin	redhat    SSH dev  新建Mysql数据库  |
+10.70.64.31	22	baoadmin	redhat    SSH dev  新建Mysql数据库  |
+10.70.64.32	22	baoadmin	redhat    SSH dev  新建Mysql数据库  |
+10.70.64.33	22	baoadmin	redhat    SSH dev  新建Mysql数据库  |
+10.70.64.34	22	baoadmin	redhat    SSH dev  新建Mysql数据库  |
+10.70.64.35	22	baoadmin	redhat    SSH dev  新建Mysql数据库  |
+10.70.64.36	22	baoadmin	redhat    SSH dev  新建Mysql数据库  |
+10.70.64.37	22	baoadmin	redhat    SSH dev  新建应用服务器Tomcat配置项  |
+10.70.64.38	22	baoadmin	redhat    SSH dev  新建应用服务器Tomcat配置项  |
+10.70.64.39	22	baoadmin	redhat    SSH dev  新建应用服务器Tomcat配置项  |
+10.70.64.40	22	baoadmin	redhat    SSH dev  Elasticsearch A  |
+10.70.64.41	22	baoadmin	redhat    SSH dev  新建应用服务器RabbitMQ配置项  |
+10.70.64.42	22	baoadmin	redhat    SSH dev  新建应用服务器RabbitMQ配置项  |
+10.70.64.43	22	baoadmin	redhat    SSH dev  Redis A  |
+10.70.64.44	22	baoadmin	redhat    SSH dev  Redis B  |
+10.70.64.45	22	baoadmin	redhat    SSH dev  Redis C  |
+10.70.64.46	22	baoadmin	redhat    SSH dev  Redis D  |
+10.70.64.47	22	baoadmin	redhat    SSH dev  Redis E  |
+10.70.64.48	22	baoadmin	redhat    SSH dev  docker  |
+10.70.64.49	22	baoadmin	redhat    SSH dev  运营平台A  |
+10.70.64.50	22	baoadmin	redhat    SSH dev  运营平台B  |
+10.70.64.51	22	baoadmin	redhat    SSH dev  Elasticsearch B  |
+10.70.64.52	22	baoadmin	redhat    SSH dev  Elasticsearch C  |
+10.70.64.53	22	baoadmin	redhat    SSH dev  logstash  |
+10.70.64.54	22	baoadmin	redhat    SSH dev  kibana  |
+10.70.64.55	22	baoadmin	redhat    SSH dev  Mysql M  |
+10.70.64.56	22	baoadmin	gTtVX3a1  SSH dev  绿融接口  |
+10.70.64.57	22	baoadmin	Qh4Z5bVb  SSH dev  渠道接口  |
+10.70.64.71	22	baoadmin	redhat    SSH dev  核心接口前台  |
+10.70.64.72	22	baoadmin	redhat    SSH dev  外钢厂接口前台  |
+10.70.64.73	22	baoadmin	redhat    SSH dev  财务接口前台  |
+10.70.64.74	22	baoadmin	redhat    SSH dev  移动接口前台  |
+10.70.64.75	22	baoadmin	redhat    SSH dev  其他接口前台  |
+10.70.64.76	22	baoadmin	redhat    SSH dev  报表中心前台  |
+10.70.64.77	22	baoadmin	redhat    SSH dev  报表中心中台  |
+10.70.64.78	22	baoadmin	redhat    SSH dev  建邦中心前台  |
+10.70.64.79	22	baoadmin	redhat    SSH dev  建邦中心中台  |
+10.70.64.80	22	baoadmin	redhat    SSH dev  广告中心前台  |
+10.70.64.81	22	baoadmin	redhat    SSH dev  广告模块console  |
+10.70.64.82	22	baoadmin	redhat    SSH dev  广告引擎  |

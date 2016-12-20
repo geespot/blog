@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://geespot.github.io">
+  <title>git介绍 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="简介SCM（Source Code Management）起源，linux内核开发一直用一个叫做BitKeeper的SCM。但是后来许可证被更改,可能对内核开发造成障碍，Linus Torvalds就开发了Git,将linus树仓库转移到了git中,Git的维护人员滨野纯(Junio C Hammano)等人持续进行开发.特点: 分布式仓库型SCM,工作区本省就是仓库。开发者拥有各自的仓库，所有的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git介绍">
+<meta property="og:url" content="http://geespot.github.io/2016/12/04/git介绍/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="简介SCM（Source Code Management）起源，linux内核开发一直用一个叫做BitKeeper的SCM。但是后来许可证被更改,可能对内核开发造成障碍，Linus Torvalds就开发了Git,将linus树仓库转移到了git中,Git的维护人员滨野纯(Junio C Hammano)等人持续进行开发.特点: 分布式仓库型SCM,工作区本省就是仓库。开发者拥有各自的仓库，所有的">
+<meta property="og:updated_time" content="2016-12-05T01:10:50.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git介绍">
+<meta name="twitter:description" content="简介SCM（Source Code Management）起源，linux内核开发一直用一个叫做BitKeeper的SCM。但是后来许可证被更改,可能对内核开发造成障碍，Linus Torvalds就开发了Git,将linus树仓库转移到了git中,Git的维护人员滨野纯(Junio C Hammano)等人持续进行开发.特点: 分布式仓库型SCM,工作区本省就是仓库。开发者拥有各自的仓库，所有的">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/images/avatar.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">记事薄</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">geespot的博客</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/tags/技术/">技术</a></li>
+	        
+				<li><a href="/tags/随笔/">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/geespot/geespot.github.io" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+		        
+					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+		        
+					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+		        
+					<a class="mail" target="_blank" href="mailto:geespot@163.com" title="mail"><i class="icon-mail"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-sort"></i></div>
+  		<h1 class="header-author js-mobile-header hide">记事薄</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/images/avatar.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">记事薄</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">geespot的博客</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/tags/技术/">技术</a></li>
+		        
+					<li><a href="/tags/随笔/">随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/geespot/geespot.github.io" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+			        
+						<a class="mail" target="_blank" href="mailto:geespot@163.com" title="mail"><i class="icon-mail"></i></a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-git介绍" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      git介绍
+    </h1>
+  
+
+        <a href="/2016/12/04/git介绍/" class="archive-article-date">
+  	<time datetime="2016-12-04T13:45:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-04</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>SCM（Source Code Management）起源，linux内核开发一直用一个叫做BitKeeper的SCM。但是后来许可证被更改,可能对内核开发造成障碍，Linus Torvalds就开发了Git,将linus树仓库转移到了git中,Git的维护人员滨野纯(Junio C Hammano)等人持续进行开发.<br>特点: 分布式仓库型SCM,工作区本省就是仓库。开发者拥有各自的仓库，所有的仓库都是并存的。</p>
+<h2 id="一、在本地仓库进行操作"><a href="#一、在本地仓库进行操作" class="headerlink" title="一、在本地仓库进行操作"></a>一、在本地仓库进行操作</h2><h3 id="1、创建新的仓库"><a href="#1、创建新的仓库" class="headerlink" title="1、创建新的仓库"></a>1、创建新的仓库</h3><pre><code class="bash">$ mkdir ~/hello -p
+$ <span class="built_in">cd</span> ~/hello
+$ git init
+</code></pre>
+<h3 id="2、Git-设置"><a href="#2、Git-设置" class="headerlink" title="2、Git 设置"></a>2、Git 设置</h3><pre><code class="bash">$  git config --add user.email<span class="string">"geespot@163.com"</span>
+$  git config --add user.name <span class="string">"shenji \"Yan \" geespot"</span>
+</code></pre>
+<p>相当于在 .git/config .git/ 添加用户信息<br>[user]<br>        email = geespot@163.com<br>        name = shenji \”Yan \” geespot</p>
+<h3 id="3、将文件添加到仓库中"><a href="#3、将文件添加到仓库中" class="headerlink" title="3、将文件添加到仓库中"></a>3、将文件添加到仓库中</h3><pre><code class="bash">$  vim hello.c
+$  git add hello.c
+$  git commit  -m <span class="string">"add hello.c"</span>
+</code></pre>
+<p>/* hello.c */</p>
+<p>#include <stdio.h><br>int main(void)<br>{<br>    printf(“Hello Word! \n”);<br>    return 1;<br>}</stdio.h></p>
+<h3 id="4、确认工作状态"><a href="#4、确认工作状态" class="headerlink" title="4、确认工作状态"></a>4、确认工作状态</h3><pre><code class="bash">$  git status
+$  git ls-files
+$  git diff
+$  git diff HEAD
+</code></pre>
+<p>首先将hello.c return 0 改为1；然后新建文件 goodbye.c<br>/* goobye.c */</p>
+<p>#include <stdio.h><br>int main(void)<br>{<br>    printf(“Goodbye world!! \n”)<br>    return 0;<br>}</stdio.h></p>
+<p>git diff 不是显示 最新提交与工作区之间的差异，二十”缓存区”与工作区之间的差异。</p>
+<h3 id="5、参照提交记录"><a href="#5、参照提交记录" class="headerlink" title="5、参照提交记录"></a>5、参照提交记录</h3><pre><code class="bash">$  git <span class="built_in">log</span> &lt;<span class="built_in">hash</span>&gt;                   <span class="comment">#到提交三列值 hash 为止</span>
+$  git <span class="built_in">log</span> &lt;<span class="built_in">hash</span>&gt;..                 <span class="comment">#从&lt;hash&gt;之后到最新提交为止</span>
+$  git <span class="built_in">log</span> &lt;<span class="built_in">hash</span>1&gt;..&lt;<span class="built_in">hash</span>2&gt;         <span class="comment">#从&lt;hash1&gt; 到&lt;hash2&gt;为止</span>
+$  git <span class="built_in">log</span>       (git <span class="built_in">log</span> HEAD)       <span class="comment">#到最新提交为止、即所有提交</span>
+$  git <span class="built_in">log</span> HEAD~ (git <span class="built_in">log</span> HEAD~1)   <span class="comment">#到倒数第二次提交为止</span>
+$  git <span class="built_in">log</span> HEAD~~(git <span class="built_in">log</span> HEAD~2)   <span class="comment">#到倒数第三次提交为止</span>
+$  git <span class="built_in">log</span> HEAD~2.. HEAD~1          <span class="comment">#从倒数第三次提交到倒数第二次提交（仅倒数第二次提交）</span>
+$  git <span class="built_in">log</span> -p goodbye.c    <span class="comment">#指定文件 仅输出与该文件闲逛的提交</span>
+</code></pre>
+<h3 id="6、修改提交"><a href="#6、修改提交" class="headerlink" title="6、修改提交"></a>6、修改提交</h3><pre><code class="bash">$  git revert HEAD     <span class="comment"># 进行的是最新的一次提交 恢复最新一次提交</span>
+$  vi hello.c
+$  git add hello.c
+$  git commit --amend
+$  git <span class="built_in">log</span> -p <span class="comment">#（确认提交信息）</span>
+$  git reset --soft HEAD~1
+$  git reset --hard HEAD
+</code></pre>
+<p>对提交记录修改是慎重，特别需要注意的是，这个方法如果用在被其他仓库参照的仓库中，会出现不兼容的问题,因此不能在此情况下使用.</p>
+<h3 id="7、为提交加标签"><a href="#7、为提交加标签" class="headerlink" title="7、为提交加标签"></a>7、为提交加标签</h3><pre><code class="bash">$  git tag ver1 HEAD~1    <span class="comment"># 倒数第二次提交加标签</span>
+$  git tag <span class="_">-l</span>             <span class="comment"># 查看标签</span>
+</code></pre>
+<h3 id="8、创建分支"><a href="#8、创建分支" class="headerlink" title="8、创建分支"></a>8、创建分支</h3><pre><code class="bash">$  git branch ver1x ver1   <span class="comment"># 为ver1标签为起点 创建名为ver1x的分支</span>
+$  git branch <span class="_">-a</span>           <span class="comment"># 查看分支</span>
+</code></pre>
+<h3 id="9、rebase命令"><a href="#9、rebase命令" class="headerlink" title="9、rebase命令"></a>9、rebase命令</h3><pre><code class="bash">$  git rebase master       <span class="comment">#master 的最新提交 如果 --onto 选项指定到任意提交</span>
+</code></pre>
+<h3 id="10、合并分支"><a href="#10、合并分支" class="headerlink" title="10、合并分支"></a>10、合并分支</h3><pre><code class="bash">$  git barach 
+$  vim goodebye.c                                   <span class="comment"># return 0 修改成1</span>
+$  git commit <span class="_">-a</span> -m <span class="string">"mod goodbye.c return 0 to 1"</span>   <span class="comment"># 分支提交</span>
+$  git merge ver1x              <span class="comment"># 合并分支</span>
+</code></pre>
+<h3 id="11、提取补丁"><a href="#11、提取补丁" class="headerlink" title="11、提取补丁"></a>11、提取补丁</h3><pre><code class="bash">$  git format-patch ver1..ver2
+</code></pre>
+<p>生成如下补丁<br>0001-add-goodbye-mod-hello.patch<br>0002-add-thanks.patch<br>0003-mod-googbey-return-to-1.patch</p>
+<h3 id="12、提取代码树"><a href="#12、提取代码树" class="headerlink" title="12、提取代码树"></a>12、提取代码树</h3><pre><code class="bash">$  git archive --format=tar --prefix=<span class="string">"hello-v2/"</span> ver2 &gt; ../hello-ver2.tar
+</code></pre>
+<h2 id="二、与远程仓库进行共同作业"><a href="#二、与远程仓库进行共同作业" class="headerlink" title="二、与远程仓库进行共同作业"></a>二、与远程仓库进行共同作业</h2><h3 id="1、复制仓库"><a href="#1、复制仓库" class="headerlink" title="1、复制仓库"></a>1、复制仓库</h3><pre><code class="bash">$  git <span class="built_in">clone</span> git://git.kernerl.org/pub/scm/linux/kermer/git/torvalds/linux-2.6
+$  git <span class="built_in">clone</span> hello <span class="built_in">local</span>   <span class="comment"># 因为kernel比较大1G 这里将hello 当做远程仓库 复制到其他位置</span>
+</code></pre>
+<h3 id="2、建立本地分支"><a href="#2、建立本地分支" class="headerlink" title="2、建立本地分支"></a>2、建立本地分支</h3><pre><code class="bash">$ git branch -b work    <span class="comment"># 针对当前分支最低呢修改 创建分支</span>
+</code></pre>
+<h3 id="3、追踪分支"><a href="#3、追踪分支" class="headerlink" title="3、追踪分支"></a>3、追踪分支</h3><pre><code class="bash">$  git branch -r     <span class="comment">#显示追踪分支的列表</span>
+$  git remote show origin
+</code></pre>
+<h3 id="4、与远程仓库同步"><a href="#4、与远程仓库同步" class="headerlink" title="4、与远程仓库同步"></a>4、与远程仓库同步</h3><pre><code class="bash">$ git commit <span class="_">-a</span>
+$ git checkout master
+$ git pull
+</code></pre>
+<h3 id="5、开发分支rebase最新状态"><a href="#5、开发分支rebase最新状态" class="headerlink" title="5、开发分支rebase最新状态"></a>5、开发分支rebase最新状态</h3><pre><code class="bash">$  git checkout work
+$  git commit <span class="_">-a</span>  -m <span class="string">""</span>
+$  git rebase master
+</code></pre>
+<h3 id="6-、git其他有用的命令"><a href="#6-、git其他有用的命令" class="headerlink" title="6 、git其他有用的命令"></a>6 、git其他有用的命令</h3><p>git push      本地仓库直接传递到远程仓库,仅在拥有对远程仓库的修改权限有效<br>git fetch     不进行be你弟分支的合并。git pull 是内部跳出git fetch 和git merge的操作<br>git stash     将工作区未提交的修改保存并移动到蒂塔分支使用。git stash pop 可以调出状态<br>git cherry-pick  将其他分支下的1个提交使用到当前分支使用，由于提交会赋值，因此会编程其他的散列值<br>git gc        删除未使用的对象或文件，优化仓库<br>git am        从mbox格式的文件导入补丁并提交<br>git bisect    用来指定导入了bug的提交</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-calendar"></i>
+	<a class="article-category-link" href="/categories/linux/">linux</a><a class="article-category-link" href="/categories/linux/数据库/">数据库</a><a class="article-category-link" href="/categories/linux/数据库/开发/">开发</a>
+	</div>
+
+
+      
+
+      
+        <div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode"></div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/12/05/event-sheduler设置/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          event_sheduler设置
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/12/04/数据库迁移/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数据库迁移</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 记事薄
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/技术/" style="font-size: 20px;">技术</a> <a href="/tags/运维/" style="font-size: 10px;">运维</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://clude.github.io/">奔跑的鱼</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接2</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接3</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接4</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接5</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">友情链接6</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做一点微末的工作&lt;br&gt;谢谢大家</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
